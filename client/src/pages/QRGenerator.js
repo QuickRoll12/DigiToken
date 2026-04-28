@@ -24,24 +24,22 @@ import {
 import {
   QrCode as QrCodeIcon,
   Email as EmailIcon,
-  Download as DownloadIcon,
-  Add as AddIcon
+  Download as DownloadIcon
 } from '@mui/icons-material';
 import { QRCodeSVG } from 'qrcode.react';
 import { useAuth } from '../context/AuthContext';
 
 const QRGenerator = () => {
-  const { user } = useAuth();
   const [loading, setLoading] = useState(false);
   const [generating, setGenerating] = useState(false);
   const [events, setEvents] = useState([]);
-  const [courses, setCourses] = useState([
+  const [courses] = useState([
     'B.Tech', 'M.Tech', 'BBA', 'MBA', 'B.Sc', 'M.Sc', 'Ph.D'
   ]);
-  const [years, setYears] = useState([
+  const [years] = useState([
     '1', '2', '3', '4'
   ]);
-  const [mealTypes, setMealTypes] = useState([
+  const [mealTypes] = useState([
     'veg', 'non-veg', 'any'
   ]);
   const [formData, setFormData] = useState({

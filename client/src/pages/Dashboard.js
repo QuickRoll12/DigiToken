@@ -33,7 +33,7 @@ import * as api from '../utils/api';
 ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title);
 
 const Dashboard = () => {
-  const { user } = useAuth();
+  const { } = useAuth();
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState({
     open: false,

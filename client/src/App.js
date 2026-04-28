@@ -7,7 +7,7 @@ import Layout from './components/layout/Layout';
 
 // Auth components
 import Login from './components/auth/Login';
-import Register from './components/auth/Register';
+// import Register from './components/auth/Register'; // Uncomment if registration is needed
 
 // Pages
 import Dashboard from './pages/Dashboard';

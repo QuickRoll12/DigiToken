@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as api from '../utils/api';
 import { 
   Box, 
@@ -16,11 +16,7 @@ import {
   ListItem,
   ListItemText,
   Chip,
-  IconButton,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions
+  IconButton
 } from '@mui/material';
 import {
   QrCodeScanner as QrCodeScannerIcon,
@@ -34,7 +30,6 @@ import { Html5QrcodeScanner } from 'html5-qrcode';
 import { useAuth } from '../context/AuthContext';
 
 const QRScanner = () => {
-  const { user } = useAuth();
   const [loading, setLoading] = useState(false);
   const [scanning, setScanning] = useState(false);
   const [scanner, setScanner] = useState(null);

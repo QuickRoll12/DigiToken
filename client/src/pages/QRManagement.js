@@ -20,7 +20,6 @@ import {
   TableRow,
   TablePagination,
   IconButton,
-  Divider,
   Alert,
   Snackbar,
   CircularProgress,
@@ -30,16 +29,11 @@ import {
   DialogActions,
   InputAdornment,
   Stack,
-  List,
-  ListItem,
-  ListItemText,
-  ListItemSecondaryAction,
   Checkbox,
   Tab,
   Tabs,
   Card,
-  CardContent,
-  CardActions
+  CardContent
 } from '@mui/material';
 import {
   Search as SearchIcon,
@@ -52,15 +46,13 @@ import {
   Delete as DeleteIcon,
   Refresh as RefreshIcon,
   Close as CloseIcon,
-  Person as PersonIcon,
-  School as SchoolIcon,
-  Group as GroupIcon
+  Person as PersonIcon
 } from '@mui/icons-material';
 import { QRCodeSVG } from 'qrcode.react';
 import { useAuth } from '../context/AuthContext';
 
 const QRManagement = () => {
-  const { user, isAdmin } = useAuth();
+  const { isAdmin } = useAuth();
   const [loading, setLoading] = useState(true);
   const [qrCodes, setQRCodes] = useState([]);
   const [filteredQRCodes, setFilteredQRCodes] = useState([]);
@@ -102,8 +94,6 @@ const QRManagement = () => {
   const [rangeError, setRangeError] = useState('');
   const [emailBatchSize, setEmailBatchSize] = useState(5); // Default batch size of 5
   
-  const coursesList = ['B.Tech', 'M.Tech', 'BBA', 'MBA', 'B.Sc', 'M.Sc', 'Ph.D'];
-  const yearsList = ['1st Year', '2nd Year', '3rd Year', '4th Year'];
 
   useEffect(() => {
     const fetchData = async () => {
@@ -121,10 +111,8 @@ const QRManagement = () => {
         
         // Extract unique courses and years from QR codes
         const uniqueCourses = [...new Set(qrCodesData.map(qr => qr.course))].sort();
-        const uniqueYears = [...new Set(qrCodesData.map(qr => qr.year))].sort();
         
         setCourses(uniqueCourses);
-        // setYears(uniqueYears);
       } catch (error) {
         console.error('Error fetching data:', error);
         setAlert({

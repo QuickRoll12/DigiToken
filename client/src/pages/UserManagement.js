@@ -3,8 +3,7 @@ import * as api from '../utils/api';
 import { 
   Box, 
   Typography, 
-  Paper, 
-  Grid, 
+  Paper,
   Button, 
   TextField,
   Table,
@@ -15,7 +14,6 @@ import {
   TableRow,
   TablePagination,
   IconButton,
-  Divider,
   Alert,
   Snackbar,
   CircularProgress,
@@ -24,7 +22,6 @@ import {
   DialogContent,
   DialogActions,
   InputAdornment,
-  Stack,
   FormControl,
   InputLabel,
   Select,
@@ -35,14 +32,12 @@ import {
   Search as SearchIcon,
   Edit as EditIcon,
   Delete as DeleteIcon,
-  Refresh as RefreshIcon,
-  Close as CloseIcon,
   PersonAdd as PersonAddIcon
 } from '@mui/icons-material';
 import { useAuth } from '../context/AuthContext';
 
 const UserManagement = () => {
-  const { user, isAdmin } = useAuth();
+  const { isAdmin } = useAuth();
   const [loading, setLoading] = useState(true);
   const [users, setUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);

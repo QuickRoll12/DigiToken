@@ -14,20 +14,16 @@ import {
   DialogActions,
   Snackbar,
   Alert,
+  Alert,
   CircularProgress,
-  Divider,
-  Chip,
-  Stack,
-  Tooltip
+  Chip
 } from '@mui/material';
 import {
   Add as AddIcon,
   Delete as DeleteIcon,
   Edit as EditIcon,
-  Upload as UploadIcon,
   Download as DownloadIcon,
   CloudUpload as CloudUploadIcon,
-  Search as SearchIcon,
   Clear as ClearIcon
 } from '@mui/icons-material';
 import { DataGrid } from '@mui/x-data-grid';
@@ -35,7 +31,6 @@ import * as api from '../utils/api';
 import { useAuth } from '../context/AuthContext';
 
 const StudentManagement = () => {
-  const { isAdmin } = useAuth();
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(false);
   const [openDialog, setOpenDialog] = useState(false);
@@ -65,6 +60,7 @@ const StudentManagement = () => {
   // Fetch students on component mount
   useEffect(() => {
     fetchStudents();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
   const fetchStudents = async () => {
@@ -91,6 +87,7 @@ const StudentManagement = () => {
     }, 500);
     
     return () => clearTimeout(timer);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters]);
   
   const handleFilterChange = (e) => {
@@ -282,6 +279,7 @@ const StudentManagement = () => {
     } finally {
       setLoading(false);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ 

@@ -19,7 +19,6 @@ import {
 } from '@mui/material';
 import {
   ArrowBack as ArrowBackIcon,
-  Event as EventIcon,
   LocationOn as LocationIcon,
   CalendarMonth as CalendarIcon,
   AccessTime as AccessTimeIcon,

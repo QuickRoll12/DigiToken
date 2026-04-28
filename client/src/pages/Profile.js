@@ -149,7 +149,6 @@ const Profile = () => {
   };
 
   const [recentActivity, setRecentActivity] = useState([]);
-  const [loadingActivity, setLoadingActivity] = useState(false);
   const [userStats, setUserStats] = useState({
     eventsCount: 0,
     qrCodesCount: 0,
