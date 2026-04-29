@@ -27,8 +27,6 @@ import {
   Download as DownloadIcon
 } from '@mui/icons-material';
 import { QRCodeSVG } from 'qrcode.react';
-import { useAuth } from '../context/AuthContext';
-
 const QRGenerator = () => {
   const [loading, setLoading] = useState(false);
   const [generating, setGenerating] = useState(false);

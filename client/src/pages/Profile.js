@@ -149,6 +149,8 @@ const Profile = () => {
   };
 
   const [recentActivity, setRecentActivity] = useState([]);
+  // eslint-disable-next-line no-unused-vars
+  const [loadingActivity, setLoadingActivity] = useState(false);
   const [userStats, setUserStats] = useState({
     eventsCount: 0,
     qrCodesCount: 0,

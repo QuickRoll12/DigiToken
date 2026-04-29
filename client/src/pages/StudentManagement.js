@@ -14,7 +14,6 @@ import {
   DialogActions,
   Snackbar,
   Alert,
-  Alert,
   CircularProgress,
   Chip
 } from '@mui/material';
@@ -28,7 +27,6 @@ import {
 } from '@mui/icons-material';
 import { DataGrid } from '@mui/x-data-grid';
 import * as api from '../utils/api';
-import { useAuth } from '../context/AuthContext';
 
 const StudentManagement = () => {
   const [students, setStudents] = useState([]);

@@ -10,8 +10,7 @@ import {
   CardContent, 
   Divider, 
   Alert, 
-  Snackbar, 
-  CircularProgress,
+  Snackbar,
   List,
   ListItem,
   ListItemText,
@@ -34,9 +33,10 @@ import {
   AdminPanelSettings as AdminIcon
 } from '@mui/icons-material';
 import { Html5QrcodeScanner } from 'html5-qrcode';
-import { useAuth } from '../context/AuthContext';
 
 const AdminQRScanner = () => {
+  // eslint-disable-next-line no-unused-vars
+  const [loading, setLoading] = useState(false);
   const [scanning, setScanning] = useState(false);
   const [scanner, setScanner] = useState(null);
   const [scannedResult, setScannedResult] = useState(null);

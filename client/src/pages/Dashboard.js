@@ -26,14 +26,13 @@ import {
 } from '@mui/icons-material';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title } from 'chart.js';
 import { Pie, Bar } from 'react-chartjs-2';
-import { useAuth } from '../context/AuthContext';
 import * as api from '../utils/api';
 
 // Register ChartJS components
 ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title);
 
 const Dashboard = () => {
-  const { } = useAuth();
+  // useAuth not needed anymore since user is not used
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState({
     open: false,

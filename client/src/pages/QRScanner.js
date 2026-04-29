@@ -6,8 +6,6 @@ import {
   Paper, 
   Grid, 
   Button, 
-  Card, 
-  CardContent, 
   Divider, 
   Alert, 
   Snackbar, 
@@ -26,8 +24,9 @@ import {
   Refresh as RefreshIcon,
   FlipCameraAndroid as FlipCameraIcon
 } from '@mui/icons-material';
+
+
 import { Html5QrcodeScanner } from 'html5-qrcode';
-import { useAuth } from '../context/AuthContext';
 
 const QRScanner = () => {
   const [loading, setLoading] = useState(false);
